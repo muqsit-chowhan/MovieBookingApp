@@ -92,7 +92,6 @@ const MainTabs: React.FC = () => (
         <Tab.Screen name="Watch" component={HomeScreen} />
         <Tab.Screen name="Media Library" component={MediaLibraryScreen} />
         <Tab.Screen name="More" component={MoreScreen} />
-        {/* <Tab.Screen name="MovieBooking" component={MovieBooking} /> */}
     </Tab.Navigator>
 );
 
