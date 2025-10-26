@@ -59,66 +59,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, visible, onClose }) =>
     setHasError(false);
   };
 
-//   const handleLoadEnd = () => {
-//     setLoading(false);
-    
-//     // Inject script to detect video end with multiple approaches
-//     setTimeout(() => {
-//       if (webViewRef.current) {
-//         webViewRef.current.injectJavaScript(`
-//           (function() {
-//             if (window.__videoEndListenerAdded) return;
-//             window.__videoEndListenerAdded = true;
-            
-//             let videoFound = false;
-//             let checkCount = 0;
-            
-//             function setupVideoEndListener() {
-//               const video = document.querySelector('video');
-//               if (video) {
-//                 videoFound = true;
-//                 console.log('Video element found');
-                
-//                 // Add ended event listener
-//                 video.addEventListener('ended', function() {
-//                   console.log('Video ended - event listener');
-//                   window.ReactNativeWebView.postMessage('VIDEO_ENDED');
-//                 });
-                
-//                 // Also poll as backup (check every 2 seconds)
-//                 setInterval(function() {
-//                   if (video.ended) {
-//                     console.log('Video ended - polling detected');
-//                     window.ReactNativeWebView.postMessage('VIDEO_ENDED');
-//                   }
-//                 }, 2000);
-                
-//                 return true;
-//               }
-//               return false;
-//             }
-            
-//             // Try immediately
-//             if (!setupVideoEndListener()) {
-//               // Keep trying every 500ms for up to 15 seconds
-//               const findVideoInterval = setInterval(function() {
-//                 checkCount++;
-//                 console.log('Looking for video... attempt', checkCount);
-                
-//                 if (setupVideoEndListener() || checkCount > 30) {
-//                   clearInterval(findVideoInterval);
-//                   if (!videoFound) {
-//                     console.log('Video element not found after 30 attempts');
-//                   }
-//                 }
-//               }, 500);
-//             }
-//           })();
-//           true;
-//         `);
-//       }
-//     }, 1500);
-//   };
 
 
 
