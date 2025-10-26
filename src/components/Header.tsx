@@ -20,7 +20,9 @@ const Header: React.FC<MovieHeaderProps> = ({ title, releaseDate, onBack }) => {
                 <SvgXml xml={backButton} style={styles.backButton} width={40} height={40} onPress={onBack} />
 
                 <View style={styles.textContainer}>
-                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.title}>
+                        {title.length > 10 ? `${title.substring(0, 15)}...` : title}
+                    </Text>
                     <Text style={styles.subHeader}>{releaseDate}</Text>
                 </View>
             </View>

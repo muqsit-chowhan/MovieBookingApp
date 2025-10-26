@@ -108,7 +108,6 @@ const AppNavigator: React.FC = () => (
             <Stack.Screen
                 name="GenreMovies"
                 component={GenreMovies}
-                options={{ headerShown: true, headerTitleAlign: 'center' }}
             />
             <Stack.Screen name="MovieBooking" component={MovieBooking} />
             <Stack.Screen name="Selection" component={Selection} />
